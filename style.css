@@ -1,0 +1,172 @@
+/* Modern Color Palette */
+:root {
+    --primary-color: #6a11cb; /* Purple */
+    --secondary-color: #2575fc; /* Blue */
+    --accent-color: #ff6f61; /* Coral */
+    --background-gradient: #605EA1; /*linear-gradient(135deg, var(--primary-color), var(--secondary-color));*/
+    --text-color: #333;
+    --light-text-color: #fff;
+    --card-bg: #C5BAFF;                 /* rgba(255, 255, 255, 0.95);*/
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-gradient);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .container {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    margin: 20px; /* Add margin for smaller screens */
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  /* Timer Display */
+  .timer-display {
+    margin-bottom: 20px;
+  }
+  
+  #timer {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  #session-type {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin: 10px 0;
+    font-weight: 500;
+  }
+  
+  /* Buttons */
+  .controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .controls button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    color: var(--light-text-color);
+    background: var(--primary-color);
+  }
+  
+  .controls button:hover {
+    transform: translateY(-3px);
+  }
+  
+  #start-btn {
+    background: var(--primary-color);
+  }
+  
+  #pause-btn {
+    background: var(--accent-color);
+  }
+  
+  #reset-btn {
+    background: var(--secondary-color);
+  }
+  
+  /* Settings Panel */
+  .settings {
+    background:#C4D9FF;                   /* rgba(255, 255, 255, 0.9);*/
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .settings h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .settings label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+  }
+  
+  .settings input {
+    width: 50px;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 15px;
+      margin: 10px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    #timer {
+      font-size: 3rem;
+    }
+  
+    #session-type {
+      font-size: 1rem;
+    }
+  
+    .controls button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  
+    .settings h3 {
+      font-size: 1rem;
+    }
+  
+    .settings input {
+      width: 40px;
+      padding: 5px;
+      font-size: 0.8rem;
+    }
+  }
